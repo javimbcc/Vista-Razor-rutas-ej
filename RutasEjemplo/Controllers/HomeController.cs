@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RutasEjemplo.Models;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace RutasEjemplo.Controllers
 {
@@ -20,7 +21,14 @@ namespace RutasEjemplo.Controllers
 
         public IActionResult ListaAlumnos()
         {
-            return View();
+
+            List<String> Alumnos = new List<String>();
+            Alumnos.Add("Javi");
+            Alumnos.Add("Jonna");
+            Alumnos.Add("Antonio");
+            Alumnos.Add("Jose");
+            Alumnos.Add("Mario");
+            return View(Alumnos);
         }
 
 
